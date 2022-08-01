@@ -1,0 +1,25 @@
+.userform {
+   
+    padding: auto;
+    text-align: center;
+}
+body{
+    background: #F9F5EB;
+}
+input[type=submit]{
+    margin-top: 1%;
+}
+.para{
+    text-align: center;
+    color: #495C83;
+    
+}
+.heading{
+    text-align: center;   
+    color: #1C3879;
+    margin-top: 1%;
+}
+hr{
+    border: 1px solid royalblue;
+    margin-bottom: 25px;
+}
