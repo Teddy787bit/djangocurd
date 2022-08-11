@@ -1,17 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('One') {
+    stage('Test') {
       parallel {
-        stage('One') {
+        stage('Windwos Test') {
           steps {
             build 'job1'
           }
         }
 
-        stage('Two') {
+        stage('Linux Test') {
           steps {
-            build 'job2'
+            build 'job1'
           }
         }
 
