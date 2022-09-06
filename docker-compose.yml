@@ -1,0 +1,36 @@
+version: '3.3'
+
+services:
+  mysql:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    volumes:
+      - ~/Mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=Root@123
+      #- MYSQL_PASSWORD=root
+      - MYSQL_ROOT_USER=root
+      - MYSQL_DATABASE='Userreg'
+      - MYSQL_HOST=''
+      - ssl='0'
+    network_mode: "host"
+    #networks:
+      #- curd2_default
+    #  - host
+
+  webserver:
+    build: .
+    network_mode: "host"
+      #- curd2_default
+      
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+  
+  
+#networks: 
+#  curd2_default:
+#      #driver: bridge
+#      external: true

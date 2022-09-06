@@ -1,0 +1,21 @@
+pipeline {
+    agent any 
+    stages{
+        stage ('one') {
+            parallel{
+                stage ('one'){
+                    steps{
+                        build 'job1'
+                    }
+                }
+                stage ('two'){
+                    steps{
+                    build 'job2'
+                    }
+                }
+            }
+        }
+
+    }
+
+}

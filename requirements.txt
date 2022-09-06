@@ -1,0 +1,6 @@
+Django==1.11.11
+requests==2.18.4
+mysqlclient==2.1.1
+pymysql
+PyMySQL[rsa]
+cryptography
